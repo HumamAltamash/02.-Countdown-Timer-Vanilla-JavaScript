@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple countdown timer using HTML, CSS, and JavaScript"
+    />
+    <meta name="author" content="Humam Altamash" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="container__title">Countdown Timer</h1>
+
+      <!-- Timer Labels -->
+      <div class="container__labels">
+        <p class="container__labels--label" aria-label="Hours">Hours</p>
+        <p class="container__labels--label" aria-label="Minutes">Minutes</p>
+        <p class="container__labels--label" aria-label="Seconds">Seconds</p>
+      </div>
+
+      <!-- Timer Inputs -->
+      <div class="container__inputs">
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__inputs--time hour"
+          aria-label="Enter hours"
+        />
+        <p class="container__inputs--colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__inputs--time min"
+          aria-label="Enter minutes"
+        />
+        <p class="container__inputs--colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__inputs--time sec"
+          aria-label="Enter seconds"
+        />
+      </div>
+
+      <!-- Timer Buttons -->
+      <div class="container__btns">
+        <button class="container__btns--btn start" aria-label="Start the timer">
+          Start
+        </button>
+        <button class="container__btns--btn stop" aria-label="Pause the timer">
+          Stop
+        </button>
+        <button class="container__btns--btn reset" aria-label="Reset the timer">
+          Reset
+        </button>
+      </div>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
